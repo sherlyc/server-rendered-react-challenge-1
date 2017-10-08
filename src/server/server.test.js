@@ -1,13 +1,20 @@
-import request from 'supertest'
+import nightmare from 'nightmare'
 import cheerio from 'cheerio'
 
 import server from './server'
 
-it.skip('GET / returns the html for the react component', () => {
-  return request(server)
-    .get('/')
-    .then((res) => {
-      const $ = cheerio.load(res.text)
-      expect($('li').length).toBe(3)
-    })
+describe('integration tests', () => {
+  let app
+  beforeEach(() => {
+    app = server.listen(6679)
+  })
+  afterEach(() => {
+    app.close()
+  })
+  it.skip('GET / returns the html for the react component', async () => {
+    let page = nightmare().goto('http://localhost:6679')
+    let html = await page.evaluate(() => document.body.innerHTML).end()
+    const $ = cheerio.load(html)
+    expect($('li').length).toBe(3)
+  })
 })

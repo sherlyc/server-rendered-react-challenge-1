@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "supertest": "^3.0.0"
+    "nightmare": "^2.10.0",
+    "nightwatch": "^0.9.16"
   }
 }
