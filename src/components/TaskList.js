@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
+import {remove} from '../actions/tasks'
 
 export class TaskList extends Component {
   render() {
@@ -7,7 +8,15 @@ export class TaskList extends Component {
       <div className='TaskList'>
       <h1>My Tasks</h1>
         <ul>
-          { this.props.tasks.map( (t, i) => <li key={i}>{t}</li>) }
+          {
+            this.props.tasks.map( (t, i) => {
+              return (
+                <li key={i}>
+                  {t} - <button id={`delete-${i}`} onClick={() => {this.props.remove(i)}}>delete</button>
+                </li>
+              )
+            })
+          }
         </ul>
       </div>
     )
@@ -18,4 +27,10 @@ function mapStateToProps({tasks}) {
   return {tasks}
 }
 
-export default connect(mapStateToProps)(TaskList)
+function mapDispatchToProps(dispatch) {
+  return {
+    remove: (id) => {dispatch(remove(id))}
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TaskList)
