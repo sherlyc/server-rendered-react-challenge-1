@@ -7,12 +7,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">My Task List</h1>
-        </header>
-        <p className="App-intro">
+        <div className="App-intro">
           <TaskList />
-        </p>
+        </div>
       </div>
     );
   }
