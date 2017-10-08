@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-plugin-css-modules-transform": "^1.2.7",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
@@ -23,7 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "serve": "babel-node index.js --presets env,stage-0,react --plugins css-modules-transform"
+    "serve": "webpack && babel-node index.js --presets env,stage-0,react --plugins css-modules-transform"
   },
   "devDependencies": {
     "cheerio": "^1.0.0-rc.2",
