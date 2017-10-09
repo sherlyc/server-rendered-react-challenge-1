@@ -12,6 +12,8 @@ export default function (state = initialState, action) {
         return nextState
       }
       break
+
+    default:
+      return state
   }
-  return state
 }

@@ -8,6 +8,7 @@ it('has three initial tasks', () => {
 it('removes a task', () => {
   const state = ['one', 'two', 'three']
   const expected = ['one', 'three']
+  const action = remove(1)
 
-  expect(tasks(state, remove(1))).toEqual(expected)
+  expect(tasks(state, action)).toEqual(expected)
 })
