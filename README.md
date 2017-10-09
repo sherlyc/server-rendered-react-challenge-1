@@ -21,11 +21,9 @@ The tests can be run with `yarn test` - there is one skipped test for checking i
 
 ### Step 2: Embed the redux state in the returned html
 
-### Step 3: Randomise the initial tasks when it starts up
+### Step 3: Add the ability to create a task in React
 
-### Step 4: Build the ability to add a task in React
-
-### Step 5: Save a copy of the state on the server so it is maintained on page reload
+### Step 4: Save a copy of the state on the server so it is maintained on page reload
 
 ## Resources
 
