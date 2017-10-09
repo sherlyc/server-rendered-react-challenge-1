@@ -36,6 +36,10 @@ Keep up the test coverage.
 ### Step 5: Save a copy of the state on the server so it is maintained on page reload
 Whenever the state changes on the client side send a copy to the server so that when you refresh the page you won't lose your state.
 
+### Step 6: Ensure your server is protected against XSS attacks
+
+Read the resource below on security when rendering server side code and ensure your app is secure.
+
 ## Resources
 
 * [Redux server rendering docs](http://redux.js.org/docs/recipes/ServerRendering.html)
