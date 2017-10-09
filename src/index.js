@@ -7,7 +7,7 @@ import App from './components/App'
 import store from './store'
 import registerServiceWorker from './registerServiceWorker'
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <Provider store={store}>
     <App />
   </Provider>, document.getElementById('root'))
