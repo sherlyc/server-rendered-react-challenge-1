@@ -11,7 +11,7 @@ describe('integration tests', () => {
   afterEach(() => {
     app.close()
   })
-  it.only('GET / returns the html for the react component', async () => {
+  it.skip('GET / returns the html for the react component', async () => {
     let page = nightmare().goto('http://localhost:6679')
     let html = await page.evaluate(() => document.body.innerHTML).end()
     const $ = cheerio.load(html)
