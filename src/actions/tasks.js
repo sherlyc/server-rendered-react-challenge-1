@@ -4,3 +4,10 @@ export function remove(taskId) {
     id: taskId
   }
 }
+
+export function add(name) {
+  return {
+    type: 'ADD_TASK',
+    name
+  }
+}

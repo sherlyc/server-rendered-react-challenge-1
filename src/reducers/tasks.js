@@ -13,6 +13,9 @@ export default function (state = initialState, action) {
       }
       break
 
+    case 'ADD_TASK':
+      return [...state, action.name]
+
     default:
       return state
   }
