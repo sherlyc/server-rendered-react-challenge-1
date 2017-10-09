@@ -4,14 +4,18 @@ import { Provider } from 'react-redux'
 import { renderToString } from 'react-dom/server'
 
 import express from 'express'
+import bodyParser from 'body-parser'
 
 import shuffle from '../utils/shuffle'
 import reducers from '../reducers'
 import App from '../components/App'
 const app = express()
 
+let store = createStore(reducers, {})
+
+app.use(bodyParser.json())
+
 app.get('/', (req, res) => {
-  const store = createStore(reducers, {})
   const shuffledStore = createStore(reducers, {tasks: shuffle(store.getState().tasks)})
   const html = renderToString(<Provider store={shuffledStore}><App/></Provider>)
   res.send(`<body>
@@ -22,7 +26,14 @@ app.get('/', (req, res) => {
   `)
 })
 
+app.post('/save-state', (req, res) => {
+  store = createStore(reducers, req.body.state)
+  res.sendStatus(201)
+})
+
 app.use(express.static(__dirname + '/../../public'))
+
+
 
 
 module.exports = app
