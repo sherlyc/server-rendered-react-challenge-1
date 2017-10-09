@@ -6,9 +6,14 @@ This is a simple react app which displays 3 todo items using redux. We want to u
 
 ```javascript
   yarn 
-  yarn build
-  yarn serve
+  yarn dev
 ```
+This will launch the react / redux app with webpack dev server.
+
+```javascript
+  yarn start
+```
+Will launch express so we can play with server side rendering
 
 The tests can be run with `yarn test` - there is one skipped test for checking if the three li elements from the react app are served on page load.
 
@@ -20,7 +25,7 @@ The tests can be run with `yarn test` - there is one skipped test for checking i
 
 ### Step 4: Build the ability to add a task in React
 
-### Step 5: In Redux mirror the action to the server
+### Step 5: Save a copy of the state on the server so it is maintained on page reload
 
 ## Resources
 
