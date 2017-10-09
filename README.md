@@ -41,3 +41,4 @@ Whenever the state changes on the client side send a copy to the server so that 
 * [Redux server rendering docs](http://redux.js.org/docs/recipes/ServerRendering.html)
 * [Security considerations](http://redux.js.org/docs/recipes/ServerRendering.html#security-considerations)
 * [Create React App](https://github.com/facebookincubator/create-react-app/)
+* [Nightmare end to end testing](http://nightmarejs.org/)
