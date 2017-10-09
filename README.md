@@ -27,7 +27,7 @@ Uncomment the second skipped test that checks to see if delete still works. Make
 
 ### Step 3: Shuffle the tasks on the server
 
-Make sure that redux createStore uses the shuffled state from the server.
+In the server shuffle the tasks before setting the state for React (checkout the shuffle function in src/utils/shuffle.js). You will need to send back the redux state from the server as well as the html and in the redux createStore client side code initialise the store with the state passed from the server.
 
 ### Step 4: Add the ability to create a task in React
 
