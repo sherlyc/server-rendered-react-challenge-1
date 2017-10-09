@@ -20,9 +20,10 @@
     "redux": "^3.7.2"
   },
   "scripts": {
-    "start": "npm-run-all --parallel start:webpack start:nodemon",
+    "dev": "npm-run-all --parallel start:webpack start:nodemon",
     "start:webpack":"webpack --watch",
     "start:nodemon":"nodemon --exec babel-node index.js --presets env,stage-0,react --plugins css-modules-transform",
+    "start":"react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
