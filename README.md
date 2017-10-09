@@ -42,8 +42,8 @@ Read the resource below on security when rendering server side code and ensure y
 
 ## Resources
 
+* [Create React App](https://github.com/facebookincubator/create-react-app/)
+* [Nightmare end to end testing](http://nightmarejs.org/)
 * [Redux server rendering docs](http://redux.js.org/docs/recipes/ServerRendering.html)
 * [Security considerations](http://redux.js.org/docs/recipes/ServerRendering.html#security-considerations)
 * [More on security](https://medium.com/node-security/the-most-common-xss-vulnerability-in-react-js-applications-2bdffbcc1fa0)
-* [Create React App](https://github.com/facebookincubator/create-react-app/)
-* [Nightmare end to end testing](http://nightmarejs.org/)
