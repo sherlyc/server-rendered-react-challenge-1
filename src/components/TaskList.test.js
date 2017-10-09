@@ -15,5 +15,6 @@ it('calls remove when button clicked', () => {
   const wrapper = shallow(<TaskList tasks={tasks} remove={remove}/>)
   wrapper.find('#delete-0').simulate('click')
   expect(remove).toHaveBeenCalledWith(0)
+  expect(remove.mock.calls.length).toBe(1)
 })
 
