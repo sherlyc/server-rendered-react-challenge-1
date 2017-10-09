@@ -20,7 +20,7 @@ describe('integration tests', () => {
   it.skip('can add delete a todo', async () => {
     let page = nightmare().goto('http://localhost:6679')
     let html = await page
-                .click('.taskList #delete-1')
+                .click('.TaskList #delete-1')
                 .evaluate(() => document.body.innerHTML).end()
     const $ = cheerio.load(html)
     expect($('li').length).toBe(2)
