@@ -2,6 +2,8 @@
 
 This is a simple react app which displays 3 todo items using redux. We want to use server side rendering so that the initial page load comes with the full html.
 
+[Video overview of challenge](https://youtu.be/riGaWNCAgU8) and [Sample solution live coding](https://youtu.be/tylcm4UQLaY) - you can also check out the solution branch.
+
 # Setup
 
 ```javascript
