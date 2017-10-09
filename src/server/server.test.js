@@ -11,13 +11,13 @@ describe('integration tests', () => {
   afterEach(() => {
     app.close()
   })
-  it.skip('GET / returns the html for the react component', async () => {
+  it.only('GET / returns the html for the react component', async () => {
     let page = nightmare().goto('http://localhost:6679')
     let html = await page.evaluate(() => document.body.innerHTML).end()
     const $ = cheerio.load(html)
     expect($('li').length).toBe(3)
   })
-  it('can add delete a todo', async () => {
+  it.skip('can add delete a todo', async () => {
     let page = nightmare().goto('http://localhost:6679')
     let html = await page
                 .click('.taskList #delete-1')
