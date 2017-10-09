@@ -4,7 +4,7 @@ import request from 'superagent'
 import reducers from './reducers'
 let initialState = {}
 if (window.__INITIAL_STATE__) {
-  initialState = window.__INITIAL_STATE__
+  initialState = JSON.parse(window.__INITIAL_STATE__)
   delete window.__INITIAL_STATE__
 }
 
